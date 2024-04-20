@@ -1,0 +1,47 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<main class="container">
+    <h1 class="text-center"> Cursos </h1>
+
+    <a href="alta_curso" class="btn btn-primary btn-sm">Nuevo Curso</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>nombre</th>
+                <th>camada</th>
+                <th>nivel</th>
+            </tr>            
+        </thead>
+        <tbody>
+            {% for n in cursos %}
+            <tr>
+                <td>{{n.id}}</td>
+                <td>{{n.nombre}}</td>
+                <td>{{n.camada}}</td>
+                <td>{{n.nivel}}</td>
+                {% if request.user.is_authenticated %}
+                <td><a href="{% url 'elimina_curso' n.id %}" class="btn btn-danger">BORRAR</a></td>
+                {% endif %}
+                <td><a href="{% url 'editar_curso' n.id %}" class="bth btn-warning btn-sm">EDITAR</a></td>
+            </tr>
+
+            {% endfor %}
+            
+        </tbody>
+
+
+    </table>
+
+    {% if avatar_url %}
+        <img src="{{ avatar_url }}" alt="Avatar del usuario">
+    {% endif %}
+
+</main>
+
+{% endblock %}

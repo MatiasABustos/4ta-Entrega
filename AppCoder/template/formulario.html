@@ -1,0 +1,19 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+    <form action="alta_curso" method="POST">
+        {% csrf_token %}
+        <p>nombre:</p>
+        <input type="text" name="nombre" required>
+        <p>camada:</p>
+        <input type="number" name="camada" required>
+        <p>nivel:</p>
+        <input type="text" name="nivel" required>
+
+        <button>Enviar</button>
+
+    </form>
+
+{% endblock %}    

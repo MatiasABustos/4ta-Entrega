@@ -1,0 +1,55 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+
+{% block contenido %}
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="card">
+                        <img src="{% static 'AppCoder/assets/img/ozzy00.jpg' %}"/>
+                        <div class="card-body">
+                            <h5 class="card-title">Ozzy Ozz</h5>
+                            <p class="card-text">Me encanta Python</p>
+                            <a class="btn btn-danger" href="">Enviar Mensaje</a>
+                        </div>        
+                    </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="card">
+                        <img src="{% static 'AppCoder/assets/img/lemmy.jpg' %}"/>
+                        <div class="card-body">
+                            <h5 class="card-title">Lemmy K</h5>
+                            <p class="card-text">Python & Rock&Roll</p>
+                            <a class="btn btn-danger" href="">Enviar Mensaje</a>
+                    </div>        
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="card">                
+                        <img src="{% static 'AppCoder/assets/img/eddie.jpg' %}"/>
+                        <div class="card-body">
+                            <h5 class="card-title">Eddie</h5>
+                            <p class="card-text">Powerslave</p>
+                            <a class="btn btn-danger" href="">Enviar Mensaje</a>
+                    </div>        
+                </div>
+            </div>
+        
+        </div>
+
+    </main>
+
+{% endblock %}
+
+
+
